@@ -54,18 +54,30 @@ impl ThemerProgram {
         if colors_block.2 != 0 {
             self.colors = Vec::with_capacity(colors_block.2 + 1);
             let colors_block = &content[colors_block.0 + 1..colors_block.1];
-            self.colors.push(Color::parse(&colors_block.to_vec()));
+            
+            for color_raw in colors_block {
+                let color = Color::parse(color_raw);
+                self.colors.push(color);
+            }
         }
         if fonts_block.2 != 0 {
             self.fonts = Vec::with_capacity(fonts_block.2 + 1);
             let fonts_block = &content[fonts_block.0 + 1..fonts_block.1];
-            self.fonts.push(Font::parse(&fonts_block.to_vec()));
+            
+            for font_raw in fonts_block {
+                let font = Font::parse(font_raw);
+                self.fonts.push(font);
+            }
         }
 
         if text_styles_block.2 != 0 {
             self.text_styles = Vec::with_capacity(text_styles_block.2 + 1);
             let text_styles_block = &content[text_styles_block.0 + 1..text_styles_block.1];
-            self.text_styles.push(Text::parse(&text_styles_block.to_vec()));
+            
+            for text_style_raw in text_styles_block {
+                let text_style = Text::parse(text_style_raw);
+                self.text_styles.push(text_style);
+            }
         }
     }
 }

@@ -1,13 +1,9 @@
 <colors>
-
     <primary>#HHHHHH</primary>
-
-<secondary-color>23 67 112</secondary-color>
+    <secondary-color>23 67 112</secondary-color>
 </colors>
 
 <fonts>
-
-    <all>hello</all>
-    <banan>Montsethh ssda @for=p</banan>
+    <all>Roboto</all>
+    <banan>Montserrat @for=p</banan>
 </fonts>
-

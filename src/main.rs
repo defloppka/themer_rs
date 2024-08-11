@@ -21,5 +21,7 @@ mod tests {
     #[test]
     fn test_themer_program() {
         let program = create_program(&FILE_PATH);
+
+        println!("Program: {:#?}", program);
     }
 }

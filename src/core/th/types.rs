@@ -1,8 +1,9 @@
 #![allow(unused, dead_code)]
 
 pub trait Field {
-    fn parse(block: &Vec<String>) -> Self;
+    fn parse(line: &String) -> Self;
 }
+
 // Color impl
 
 #[derive(Debug)]
@@ -21,13 +22,8 @@ impl Color {
 }
 
 impl Field for Color {
-    fn parse(block: &Vec<String>) -> Self {
-        println!("Color block: {:?}", block);
-
-        Self {
-            name: "Hello".to_string(),
-            value: "World".to_string()
-        }
+    fn parse(line: &String) -> Self {
+        todo!()  
     }
 }
 
@@ -59,14 +55,8 @@ impl Font {
 }
 
 impl Field for Font {
-    fn parse(block: &Vec<String>) -> Self {
-        println!("Fonts block: {:?}", block);
-
-        Self {
-            name: "Hello".to_string(),
-            value: "World".to_string(),
-            source: None
-        }
+    fn parse(line: &String) -> Self {
+        todo!()
     }
 }
 
@@ -109,13 +99,7 @@ impl Text {
 }
 
 impl Field for Text {
-    fn parse(block: &Vec<String>) -> Self {
-        println!("Color block: {:?}", block);
-
-        Self {
-            name: "Hello".to_string(),
-            styles: vec!["hello".to_string(), "world".to_string()],
-            for_element: None
-        }
+    fn parse(line: &String) -> Self {
+       todo!()
     }
 }
